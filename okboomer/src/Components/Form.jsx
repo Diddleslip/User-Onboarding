@@ -93,6 +93,7 @@ export default function Form() {
                         value={formData.name}
                         onChange={inputChange}
                     />
+                    {errors.name.length > 0 ? (<p className="errors">{errors.name}</p>): null} 
                 </label><br/>
 
                 <label>
@@ -104,6 +105,7 @@ export default function Form() {
                         value={formData.email}
                         onChange={inputChange}
                     />
+                    {errors.name.length > 0 ? (<p className="errors">{errors.email}</p>): null} 
                 </label><br/>
 
                 <label htmlFor="password">
@@ -115,6 +117,7 @@ export default function Form() {
                         value={formData.password}
                         onChange={inputChange}
                     />
+                    {errors.name.length > 0 ? (<p className="errors">{errors.password}</p>): null} 
                 </label><br/>
 
                 <label htmlFor="terms">
@@ -125,6 +128,7 @@ export default function Form() {
                         yomama={formData.terms}
                         onChange={inputChange}
                     />
+                    {errors.checked === false ? (<p className="errors">{errors.checkbox}</p>): null} 
                     Click to sell your soul
                 </label><br/>
                 <pre>{JSON.stringify(post, null, 2)}</pre>
